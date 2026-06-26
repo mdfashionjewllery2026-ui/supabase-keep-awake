@@ -12,9 +12,9 @@ jobs:
     steps:
       - name: Ping Supabase Project 1
         run: |
-          curl -X GET "${{ secrets.SUPABASE_1_URL }}/rest/v1/products?select=id&limit=1" \
-          -H "apikey: ${{ secrets.SUPABASE_1_ANON_KEY }}" \
-          -H "Authorization: Bearer ${{ secrets.SUPABASE_1_ANON_KEY }}"
+          curl -X GET "${{ secrets.SUPABASE_URL }}/rest/v1/products?select=id&limit=1" \
+          -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
+          -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
 
       - name: Ping Supabase Project 2
         run: |
